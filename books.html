@@ -1,0 +1,33 @@
+<div ng-controller="ControllerclassB">
+    
+    
+    <form> 			
+         <fieldset>
+        <legend> New Book : </legend><br>
+ 
+		      <table>
+                  <tr><td>Name:</td><td><input type="text" size="20" ng-model="Name"/></td> <br/></tr>
+                  <tr><td>Isbn:</td><td> <input type="text" size="40" ng-model="Isbn"/></td> <br/>
+                  <tr><td>Autor:</td><td><input type="text" size="40" ng-model="Autor" /></td> <br/>
+                  <tr><td>PubYear:</td><td><input type="text" size="40" ng-model="PubYear" /></td> <br/>
+                  <tr><td></td></tr><tr><td><button ng-click="addbook(Name, Isbn, Autor,PubYear)">Add book</button></td></tr>
+            </table>
+		</fieldset>
+    </form>
+    <label>Recherche</label><input type="text" ng-model="query"><br>
+    
+    <table border="1">
+        <thead><th>Name</th><th>Isbn</th><th>Autor</th><th>PubYear</th></thead>
+        <tr ng-repeat="classB in classBs|filter:{Name:query}">
+            <td>{{classB.Name}}</td>
+            <td>{{classB.Isbn}}</td>
+            <td>{{classB.Autor}}</td>
+            <td>{{classB.PubYear}}</td>
+        </tr>
+    
+    
+    
+    </table>
+
+
+</div>

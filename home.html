@@ -1,0 +1,18 @@
+<h1>List of Libraries</h1>
+        <div ng-controller="ControllerclassA">
+           <!-- a modifier!-->
+            <div ng-repeat="classA in classAs">
+                <form>
+                    <fieldset>
+            <legend>Library n°{{classAs.indexOf(classA)+1}}</legend><br>
+            <h3>Name : </h3> {{classA.Name}}
+            <h3>Owner:</h3> {{classA.Owner}}
+            <h3>Address: </h3>{{classA.Address}}<br>
+            <h3>Type: </h3>{{classA.Type}}<br>
+            <h3>books: </h3>
+            <a href="#/books/{{classA.id}}">Add book</a>
+                        </fieldset>
+        </form>
+        </div>
+        
+        </div>
